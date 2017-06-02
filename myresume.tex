@@ -1,0 +1,180 @@
+% Jason Parrott Resume
+% Created: 10/1/07
+% Modified: 2/23/14
+
+\documentclass[letterpaper,10pt]{article}
+
+\oddsidemargin  0.0in
+\evensidemargin 0.0in
+\textwidth      6.5in
+\headheight     0.0in
+\topmargin      -0.7in
+\textheight	10.0in
+
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% If I ever move...
+\newcommand{\name}{Jason Parrott}
+\newcommand{\addr}{https://github.com/fanatic}
+\newcommand{\phone}{(203) 539-1337}
+\newcommand{\email}{resume@jasonparrott.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Macros
+
+% Name
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[4]{
+	\vspace{-5pt}
+	\item
+	\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & #4\\
+	\end{tabular*}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[4]{
+	\resbigitem{#1}{#2}{#3}{#4}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\reslongitem}[2]{
+	\vspace{-4pt}
+	\item
+	\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+		#1 & #2 \\
+	\end{tabular*}
+}
+
+% Done Macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{8 pt}
+
+\begin{ressection}{Background}
+	\item
+	10+ year experienced Linux administrator building and maintaining reliable, elegant, and supportable systems
+\end{ressection}
+
+\begin{ressection}{Professional Experience}
+	\begin{ressubsec}{Lead Unix Systems Engineer}{June 2008 - Present}{FactSet Research Systems}{Norwalk, CT}
+		\resitem{\textbf{Operations}}
+		\ressubitem{Maintained and supported 1000+ Red Hat Enterprise Linux and Oracle Solaris servers}
+		\ressubitem{Led architecture and creation of server build and installation automation leveraging \textit{DNS}, \textit{PXELinux}, \textit{Kickstart}, \textit{Ruby on Rails}, and tight integration with internal ticketing system and monitoring systems.}
+		\ressubitem{Security - regular patching, Ksplice, reboot coordination, errata/rhn integration, }
+		\ressubitem{Backups - NetBackup, Sun StorageTek L700, Exagrid, format migration}
+		\ressubitem{Virtualization - Xen, KVM, VMWare, OpenStack, AWS; PaaS: Heroku, Docker, LXC (Internal PaaS architecture - golang)}
+		\ressubitem{Storage - Netapp, Isilon, Oracle ZFS, iSCSI, SAN,  Swift Object Storage}
+		\ressubitem{Migrations - Old hardware->new, Solaris->Linux, Physical->Virtual communication, organization, responsiveness}
+		\ressubitem{Configuration Management - CFEngine, Git, Gerrit}
+		\resitem{\textbf{Architecture}}
+		\ressubitem{Inventory collection, integrating internal and third party apis}
+		\ressubitem{virtual serial point concentrator Java}
+		\ressubitem{MySQL environment architecture, elasticsearch, Vertica}
+		\ressubitem{Mainframe to SOA}
+		\ressubitem{Client Data (distributed systems)}
+		\ressubitem{Observability}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Research Lab Staff}{May 2005 - May 2008}{ECE/CIS Department, University of Delaware}{Newark, DE}
+		\ressubitem{Maintained and supported 700 Solaris, Windows, Linux, and Macintosh desktops and servers}
+		\ressubitem{Built, configured, and maintained several undergraduate computer laboratories, research clusters, and servers for faculty and graduate students using \textit{UNIX shell scripting}, \textit{C programming}, \textit{MPICH}, and Linux/Solaris system administration skills}
+		\ressubitem{Performed daily backups and quarterly archives using \textit{Bacula}, \textit{Amanda}, as well as custom Bash and batch scripts based on rsync}
+		\ressubitem{Developed web-based projects such as a trouble ticket system, network monitoring application with \textit{mrtg}, backup information page, and software licence database using \textit{php}, \textit{python}, and \textit{mysql} with \textit{html}, \textit{css}, and \textit{ajax} using a \textit{subversion} code repository}
+		\ressubitem{Developed console-based projects such as a \textit{procmail} and python based email parser and systems information database using \textit{RCS} revision control}
+		\ressubitem{Installed and upgraded megabit and gigabit wiring in several campus buildings}
+		\ressubitem{Developed wiki-based documentation site for documenting lab procedures and a Trac-based documentation site for software projects}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Owner/Webmaster}{March 1999 - August 2006}{Superiorserve}{Wilmington, DE}
+		\ressubitem{Designed, built, and maintained company web site}
+		\ressubitem{Worked on-site to troubleshoot desktop computer malfunctions}
+	\end{ressubsec}
+
+	\begin{ressubsec}{IT Assistant}{Summer 2004, Summer 2005}{Advanced Power Control, Inc.}{Newark, DE}
+		\ressubitem{Installed and configured Windows machines for HVAC automation control}
+		\ressubitem{Repaired employee Dell brand laptops and desktops under a Premier Access Technician certification}
+	\end{ressubsec}
+\end{ressection}
+
+\begin{ressection}{Education}
+	\begin{ressubsec}{University of Delaware, Newark, DE}{May 2008}{Cumulative GPA 3.782/4.0}{}
+		\ressubitem{B.E.E., Electrical Engineering (GPA 3.822)}
+		\ressubitem{B.S., Computer Science with Honors (GPA 3.917)}
+		\ressubitem{Minor: Mathematics}
+	\end{ressubsec}
+\end{ressection}
+
+\begin{ressection}{Honors and Awards}
+	\resitem{\textbf{Honors Organizations:} Alpha Lambda Delta, NSCS, Upsilon Pi Epsilon (CS), Tau Beta Pi (Officer, Eng), Eta Kappa Nu (Officer, EE)}
+	\resitem{\textbf{Scholarships:} Delaware Governor's Scholar, Delmarva Power Scholarship, University Honors Program Scholarship, Peter J. Warter Scholarship, Liston A. Houston Scholarship, Marching and Pep Band Scholarships}
+\end{ressection}
+
+\begin{ressection}{Leadership Experience}
+	\reslongitem{Delaware Linux User Group (President)}{2005-2008}
+	\reslongitem{Marching \& Pep Band (Staff)}{2004-2008}
+	\reslongitem{ACM International Programming Contest (1st at site, 18th in mid-atlantic)}{2005}
+\end{ressection}
+\end{document}
