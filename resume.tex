@@ -24,7 +24,7 @@
 % If I ever move...
 \newcommand{\name}{Jason Parrott}
 \newcommand{\addr}{https://github.com/fanatic}
-\newcommand{\phone}{(203) 539-1337}
+\newcommand{\phone}{203-539-1337}
 \newcommand{\email}{resume@jasonparrott.com}
 
 
@@ -114,34 +114,55 @@
 \vspace{8 pt}
 
 \begin{ressection}{Background}
-	\item
+	\item[]
 	10+ year experienced Linux administrator building and maintaining reliable, elegant, and supportable systems
 \end{ressection}
 
 \begin{ressection}{Professional Experience}
-	\begin{ressubsec}{Lead Unix Systems Engineer}{June 2008 - Present}{FactSet Research Systems}{Norwalk, CT}
-		\item{\textbf{Operations}}
+	\begin{ressubsec}{Lead Software Engineer}{September 2015 - Present}{FactSet Research Systems}{Norwalk, CT}
+		\ressubitem{Assisted in FactSet's transition to a global company, adding region/zone support to FactSet.io, deploying hardware to five regional POPs allowing for self-service application deployment.  Built Apache Traffic Server CDN add-on, allowing for static asset deployment behind our Dyn-based anycast network.  Dramatically improved performance and reduced downtime for customers outside of the US}
+		\ressubitem{Developed end-to-end application and infrastructure observability add-ons including healthchecks (\textit{Go}, \textit{Kafka}, \textit{Nagios} plugins), metrics (\textit{Go}, \textit{Kafka}, \textit{OpenTSDB}, \textit{MapR}, \textit{Grafana}), logging (\textit{Ruby on Rails}, \textit{Go}, \textit{Syslog}), alerting (\textit{Go}, \textit{Twilio}, \textit{Pushover}), and status pages (\textit{Ruby on Rails}) for internal incident communication}
+		\ressubitem{Developed containerized Database as a Service platform for \textit{PostgreSQL}, \textit{Redis}, and \textit{RabbitMQ}, leveraging FactSet.io Container Manager, including automatic provisioning, monitoring, self-service backups and restores, and supporting advanced forking/follow/rollback features (\textit{Go}, \textit{WAL-E})}
+		\ressubitem{Developed Identity API add-on, providing an authorization and authentication add-on for FactSet.io apps using \textit{OAuth}, \textit{OpenID Connect}, and \textit{JWT}, federating employee, service, and client accounts}
+		\ressubitem{Introduced, deployed, and supported OpenStack Infrastructure as a Service (Liberty, Mitaka, Newton, and Ocata), managing onboarding, training, day-to-day operational support, release upgrades, and high availability}
+		\ressubitem{Developed Kerberos SSO authorization add-on for the FactSet.io (PaaS) HTTP Router}
+		\ressubitem{Developed application idle support in FactSet.io, reducing hardware utilization}
+		\ressubitem{Integrated \textit{Infoblox} DNS appliance automation and tooling into the build system, eliminating manual tickets and reducing turnaround time}
+	\end{ressubsec}
+	\begin{ressubsec}{Lead Unix Systems Engineer}{September 2013 - September 2015}{FactSet Research Systems}{Norwalk, CT}
+		\ressubitem{Designed and built FactSet.io, a Platform as a Service, including Container Engine (\textit{Go}, \textit{Docker}), Container Manager (\textit{Go}, \textit{Zookeeper}, Google Omega), HTTP Router (\textit{Node.js}, \textit{Redis Sentinel}), Git SSH Proxy (\textit{Go}), Slug Compiler (\textit{Ruby}, \textit{Cloud Foundry} and \textit{Heroku} buildpacks), Log Aggregation (\textit{Heroku Logplex}), Platform API (\textit{Go}, \textit{PostgreSQL}), Web Dashboard (\textit{Node.js}, \textit{React}, \textit{Webpack}), and CLI (\textit{Go}).  Currently used by 3500 applications and 575 active developers, driving FactSet's migration off OpenVMS monolithic codebase to microservices, allowing rapid integration of new company acquisitions, and primary infrastructure for FactSet's new web-based Workstation}
+		\ressubitem{Led R\&D effort to find a new storage system for 20TB of client portfolio data on VMS, ultimiately recommending \textit{MapR Tables}, building prototype tools, benchmarking performance, and testing various failure scenarios}
+		\ressubitem{Worked with various teams to graph on-call alerts, categorizing them, then reducing alerts dramatically with targeted improvements}
+		\ressubitem{Improved system crash response with automated ticket creation, detailed system details (charts, last minute process list, related ticket list), and automatic recovery attempts, all but eliminiating the largest source of on-call alerts}
+	\end{ressubsec}
+\pagebreak
+
+	\begin{ressubsec}{Senior Unix Systems Engineer}{October 2011 - September 2013}{FactSet Research Systems}{Norwalk, CT}
+		\ressubitem{Wrote a Java-based virtual serial port concentrator for VMWare to complement our \textit{Conserver} infrastructure for physical serial consoles}
+		\ressubitem{Implemented inventory collection of hardware and software health, versions, and applications, integrating internal and third party APIs}
+		\ressubitem{Introduced \textit{OpenStack Swift} object storage, drastically reducing storage costs for our commercial news and research content}
+		\ressubitem{Led several large migration projects (HP G1 $\rightarrow$ G7, Solaris decommission in favor of Linux, Physical $\rightarrow$ Virtual), including assisting developers in application migration, providing a point of communiation, and organizing gantt charts and tickets}
+		\ressubitem{Inherited the MySQL Database team, maintaining, upgrading, troubleshooting, and on-call support for 100+ content and application databases for various client-facing development teams}
+		\ressubitem{Built network switchport automation to automatically change VLAN and update switchport descriptions during box build}
+		\ressubitem{Designed and built a self-service \textit{MySQL} provisioning system based on \textit{Linux CGroups}, \textit{Pacemaker}, and \textit{Percona Monitoring} tools, with a Rails-based interface for management, requests, query review, metrics, and alerting}
+		\ressubitem{Designed and built a self-service \textit{Elasticsearch} provisioning system for FactSet's new FactSearch search/autocomplete system and Central Logging Platform}
+		\ressubitem{Investigated, installed, and supported \textit{Vertica} for new analytics applications}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Unix Systems Engineer}{June 2008 - October 2011}{FactSet Research Systems}{Norwalk, CT}
 		\ressubitem{Maintained and supported 1000+ Red Hat Enterprise Linux and Oracle Solaris servers}
 		\ressubitem{Led architecture and creation of server build and installation automation leveraging \textit{DNS}, \textit{PXELinux}, \textit{Kickstart}, \textit{Ruby on Rails}, and tight integration with internal ticketing system and monitoring systems.}
-		\ressubitem{Security - regular patching, Ksplice, reboot coordination, errata/rhn integration, }
-		\ressubitem{Backups - NetBackup, Sun StorageTek L700, Exagrid, format migration}
-		\ressubitem{Virtualization - Xen, KVM, VMWare, OpenStack, AWS; PaaS: Heroku, Docker, LXC (Internal PaaS architecture - golang)}
-		\ressubitem{Storage - Netapp, Isilon, Oracle ZFS, iSCSI, SAN,  Swift Object Storage}
-		\ressubitem{Migrations - Old $\rightarrow$ new hardware, Solaris $\rightarrow$ Linux, Physical $\rightarrow$ Virtual w/ communication, organization, responsiveness}
-		\ressubitem{Configuration Management - CFEngine, Git, Gerrit}
-		\resitem{\textbf{Architecture}}
-		\ressubitem{Inventory collection, integrating internal and third party apis}
-		\ressubitem{virtual serial point concentrator Java}
-		\ressubitem{MySQL environment architecture, elasticsearch, Vertica}
-		\ressubitem{Mainframe to SOA}
-		\ressubitem{Client Data (distributed systems)}
-		\ressubitem{Observability}
+		\ressubitem{Developed multi-layer rolling patching system: daily \textit{Ksplice} live kernel-patching, weekly \textit{Yum} security package updates of non-sensitive packages, quarterly kernel and "minor release" reboot coordination with full Errata and RHN integration}
+		\ressubitem{Planned and executed \textit{NetBackup} upgrades, \textit{Sun StorageTek L700} maintenance, and migration to \textit{Exagrid} disk storage}
+		\ressubitem{Maintained several virtualization environments, starting on \textit{Xen}, migrating to \textit{KVM}, and eventually settling on \textit{VMWare}}
+		\ressubitem{Managed provisioning, ACLs, quotas, and NFS exports on various file storage appliances (\textit{NetApp}, \textit{Isilon}, \textit{Oracle ZFS})}
+		\ressubitem{Implemented configuration management while following change control policies and rolling installs (\textit{CFEngine}, \textit{Git}, \textit{Gerrit})}
 	\end{ressubsec}
 
 	\begin{ressubsec}{Research Lab Staff}{May 2005 - May 2008}{ECE/CIS Department, University of Delaware}{Newark, DE}
 		\ressubitem{Maintained and supported 700 Solaris, Windows, Linux, and Macintosh desktops and servers}
 		\ressubitem{Built, configured, and maintained several undergraduate computer laboratories, research clusters, and servers for faculty and graduate students using \textit{UNIX shell scripting}, \textit{C programming}, \textit{MPICH}, and Linux/Solaris system administration skills}
-		\ressubitem{Performed daily backups and quarterly archives using \textit{Bacula}, \textit{Amanda}, as well as custom Bash and batch scripts based on rsync}
+		\ressubitem{Performed daily backups and quarterly archives using \textit{Bacula}, \textit{Amanda}, as well as custom Bash and batch scripts based on textit{rsync}}
 		\ressubitem{Developed web-based projects such as a trouble ticket system, network monitoring application with \textit{mrtg}, backup information page, and software licence database using \textit{php}, \textit{python}, and \textit{mysql} with \textit{html}, \textit{css}, and \textit{ajax} using a \textit{subversion} code repository}
 		\ressubitem{Developed console-based projects such as a \textit{procmail} and python based email parser and systems information database using \textit{RCS} revision control}
 		\ressubitem{Installed and upgraded megabit and gigabit wiring in several campus buildings}
@@ -168,13 +189,6 @@
 \end{ressection}
 
 \begin{ressection}{Honors and Awards}
-	\resitem{\textbf{Honors Organizations:} Alpha Lambda Delta, NSCS, Upsilon Pi Epsilon (CS), Tau Beta Pi (Officer, Eng), Eta Kappa Nu (Officer, EE)}
-	\resitem{\textbf{Scholarships:} Delaware Governor's Scholar, Delmarva Power Scholarship, University Honors Program Scholarship, Peter J. Warter Scholarship, Liston A. Houston Scholarship, Marching and Pep Band Scholarships}
-\end{ressection}
-
-\begin{ressection}{Leadership Experience}
-	\reslongitem{Delaware Linux User Group (President)}{2005-2008}
-	\reslongitem{Marching \& Pep Band (Staff)}{2004-2008}
-	\reslongitem{ACM International Programming Contest (1st at site, 18th in mid-atlantic)}{2005}
+	\resitem{2015 Charles J. Snyder Technologist of the Year, FactSet}
 \end{ressection}
 \end{document}
