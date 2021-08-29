@@ -1,3 +1,6 @@
 *.log
 *.aux
+*.fdb_latexmk
+*.fls
+__latexindent_temp.tex
 reviews/
