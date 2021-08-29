@@ -1,6 +1,6 @@
 % Jason Parrott Resume
 % Created: 10/1/07
-% Modified: 2/23/14
+% Modified: 8/29/21
 
 \documentclass[letterpaper,10pt]{article}
 
@@ -115,12 +115,40 @@
 
 \begin{ressection}{Background}
 	\item[]
-	10+ year experienced Linux administrator building and maintaining reliable, elegant, and supportable systems
+	15+ year experienced platform engineer building and maintaining reliable, elegant, and supportable systems
 \end{ressection}
 
 \begin{ressection}{Professional Experience}
-	\begin{ressubsec}{Lead Software Engineer}{September 2015 - Present}{FactSet Research Systems}{Norwalk, CT}
-		\ressubitem{Assisted in FactSet's transition to a global company, adding region/zone support to FactSet.io, deploying hardware to five regional POPs allowing for self-service application deployment.  Built Apache Traffic Server CDN add-on, allowing for static asset deployment behind our Dyn-based anycast network.  Dramatically improved performance and reduced downtime for customers outside of the US}
+	\begin{ressubsec}{VP, Principal Software Architect}{September 2018 - Present}{FactSet Research Systems}{Norwalk, CT}
+		\ressubitem{Managed a team of seven engineers, responsible for recruiting, team building, product development, project management, technical support, training, and technical architecture}
+		\ressubitem{Designed, developed, and maintained Rollout, an internal feature flag management and data-driven experimentation platform for FactSet.  Rollout rapidly changed engineering culture, allowing development teams to ship features faster and more reliably to customers.  It enabled a/b testing, user events, and performance and conversion metrics to be collected and analyzed in real-time.  Scheduled changes, approval gates, and metrics-driven kill switches support company initatives for visibility and control (\textit{Go}, \textit{React}, \textit{PostgreSQL}, \textit{Kafka}, \textit{Elasticsearch})}
+		\ressubitem{Inherited the CI/CD team, maintaining, upgrading, troubleshooting, and on-call support for 15000+ content and application Git-based repositories (\textit{GitHub Enterprise Server}), testing and deployment pipelines (\textit{Cloudbees}, \textit{Jenkins}), and artifact repositories (\textit{JFrog Artifactory}) for all of FactSet's client-facing development teams.  Systematically transformed the team's style of working, enabling rapid development and improved stability.}
+		\ressubitem{Rewrote the FactSet.io HTTP Router from Node.js to Go, allowing the platform to scale to nearly 50,000 requests per second and enable new features (\textit{blue/green deployments}, \textit{mTLS application identity}, \textit{SOCKS5}, \textit{HTTP/2}, \textit{gRPC}, \textit{websockets})}
+		\ressubitem{Added Microsoft Azure cloud support to FactSet.io in one week, working through early adopter issues and fulfilling the vision of a true multi-cloud platform for developers}
+		\ressubitem{Continued to scale FactSet.io to handle nearly 30,000 applications, 2,000 daily active users, and 40\% year-over-year growth rate while making order-of-magnitude improvements to hardware costs, developer efficiency, and operational burden (\textit{Spinnaker})}
+		\ressubitem{Improved the existing containerized Database as a Serivce platform, adding zero-config at-rest and in-flight encryption, multi-tenant Kafka plans, Elasticsearch and MSSQL support}
+		\ressubitem{Started migration of FactSet.io runtime from Docker to Firecracker.  Migrated from Kerberos to SAML for platform authentication.  Migrated from X-Ray to Lightstep for distributed tracing}
+		\ressubitem{Built a multi-tenant, pluggable documentation and collaboration platform allowing migration off dozens of dispearate platforms into a single, searchable, and discoverable location (\textit{Go}, \textit{React}, \textit{CRDT})}
+		\ressubitem{Enabled network flow visibility and monitoring for FactSet.io, allowing developers to see the flow of data through their applications, services, and databases (\textit{eBPF})}
+		\ressubitem{Executed an external audit of FactSet.io, identifying and resolving dozens of security and compliance improvements, documenting them in a CSA CIAQ for teams going through audits of their own.  Migrated secrets to \textit{Hashicorp Vault}, allowing our components to securely manage their access to resources using automatic rotating tokens and eliminating long-lived secrets on disk}
+		\ressubitem{Developed virtual network support in FactSet.io, allowing for isolated apps and data with secured ingress and egress as well as DNS-based service discovery for clusters and microservice architectures (\textit{IPv6}, \textit{Wireguard})}
+	\end{ressubsec}
+
+\pagebreak
+
+	\begin{ressubsec}{Principal Software Engineer}{February 2017 - September 2018}{FactSet Research Systems}{Norwalk, CT}
+		\ressubitem{Managed a team of five engineers, responsible for recruiting, team building, product development, project management, technical support, training, and technical architecture}
+		\ressubitem{Created an integrated Continuous Integration solution providing container-based, ephemeral, zero-config unit and integration testing that runs thousands of times a day}
+		\ressubitem{Improved the existing containerized Database as a Serivce platform, adding multi-region, scaling to 2000+ dbs, supporting client-facing workloads, and adding \textit{Kafka} support}
+		\ressubitem{Added Amazon Web Service (\textit{AWS}) support to FactSet.io, migrating 10000+ applications and their data to the cloud with no downtime or developer intervention}
+		\ressubitem{Deployed Global HTTP Routing and Load Balancing to support FactSet's continued transition to a global company, reducing latency with an easy-to-use developer experience}
+		\ressubitem{Created FactSet's first Developer Portal (developer.factset.com) CRM based on \textit{Hugo}, then later \textit{Drupal} which kicked off FactSet's Digital Transformation and API initatives (now one of FactSet's fastest growing products)}
+		\ressubitem{Developed a ChatOps Bot for \textit{Microsoft Teams} and \textit{Slack} to allow FactSet.io's growing user base to toggle their CI/CD workflows in a collaborative environment}
+	\end{ressubsec}
+
+	\begin{ressubsec}{Lead Software Engineer}{September 2015 - February 2017}{FactSet Research Systems}{Norwalk, CT}
+		\ressubitem{Managed a team of three engineers, responsible for recruiting, team building, product development, project management, technical support, training, and technical architecture}
+		\ressubitem{Assisted in FactSet's transition to a global company, adding region/zone support to FactSet.io, deploying hardware to five regional POPs allowing for self-service application deployment.  Built Apache Traffic Server CDN (cdn.factset.com), allowing for static asset deployment behind our Dyn-based anycast network.  Dramatically improved performance and reduced downtime for customers outside of the US}
 		\ressubitem{Developed end-to-end application and infrastructure observability add-ons including healthchecks (\textit{Go}, \textit{Kafka}, \textit{Nagios} plugins), metrics (\textit{Go}, \textit{Kafka}, \textit{OpenTSDB}, \textit{MapR}, \textit{Grafana}), logging (\textit{Ruby on Rails}, \textit{Go}, \textit{Syslog}), alerting (\textit{Go}, \textit{Twilio}, \textit{Pushover}), and status pages (\textit{Ruby on Rails}) for internal incident communication}
 		\ressubitem{Developed containerized Database as a Service platform for \textit{PostgreSQL}, \textit{Redis}, and \textit{RabbitMQ}, leveraging FactSet.io Container Manager, including automatic provisioning, monitoring, self-service backups and restores, and supporting advanced forking/follow/rollback features (\textit{Go}, \textit{WAL-E})}
 		\ressubitem{Developed Identity API add-on, providing an authorization and authentication add-on for FactSet.io apps using \textit{OAuth}, \textit{OpenID Connect}, and \textit{JWT}, federating employee, service, and client accounts}
@@ -129,13 +157,16 @@
 		\ressubitem{Developed application idle support in FactSet.io, reducing hardware utilization}
 		\ressubitem{Integrated \textit{Infoblox} DNS appliance automation and tooling into the build system, eliminating manual tickets and reducing turnaround time}
 	\end{ressubsec}
+
+	\pagebreak
+
 	\begin{ressubsec}{Lead Unix Systems Engineer}{September 2013 - September 2015}{FactSet Research Systems}{Norwalk, CT}
 		\ressubitem{Designed and built FactSet.io, a Platform as a Service, including Container Engine (\textit{Go}, \textit{Docker}), Container Manager (\textit{Go}, \textit{Zookeeper}, Google Omega), HTTP Router (\textit{Node.js}, \textit{Redis Sentinel}), Git SSH Proxy (\textit{Go}), Slug Compiler (\textit{Ruby}, \textit{Cloud Foundry} and \textit{Heroku} buildpacks), Log Aggregation (\textit{Heroku Logplex}), Platform API (\textit{Go}, \textit{PostgreSQL}), Web Dashboard (\textit{Node.js}, \textit{React}, \textit{Webpack}), and CLI (\textit{Go}).  Currently used by 3500 applications and 575 active developers, driving FactSet's migration off OpenVMS monolithic codebase to microservices, allowing rapid integration of new company acquisitions, and primary infrastructure for FactSet's new web-based Workstation}
 		\ressubitem{Led R\&D effort to find a new storage system for 20TB of client portfolio data on VMS, ultimiately recommending \textit{MapR Tables}, building prototype tools, benchmarking performance, and testing various failure scenarios}
 		\ressubitem{Worked with various teams to graph on-call alerts, categorizing them, then reducing alerts dramatically with targeted improvements}
 		\ressubitem{Improved system crash response with automated ticket creation, detailed system details (charts, last minute process list, related ticket list), and automatic recovery attempts, all but eliminiating the largest source of on-call alerts}
 	\end{ressubsec}
-\pagebreak
+
 
 	\begin{ressubsec}{Senior Unix Systems Engineer}{October 2011 - September 2013}{FactSet Research Systems}{Norwalk, CT}
 		\ressubitem{Wrote a Java-based virtual serial port concentrator for VMWare to complement our \textit{Conserver} infrastructure for physical serial consoles}
@@ -158,6 +189,8 @@
 		\ressubitem{Managed provisioning, ACLs, quotas, and NFS exports on various file storage appliances (\textit{NetApp}, \textit{Isilon}, \textit{Oracle ZFS})}
 		\ressubitem{Implemented configuration management while following change control policies and rolling installs (\textit{CFEngine}, \textit{Git}, \textit{Gerrit})}
 	\end{ressubsec}
+
+\pagebreak
 
 	\begin{ressubsec}{Research Lab Staff}{May 2005 - May 2008}{ECE/CIS Department, University of Delaware}{Newark, DE}
 		\ressubitem{Maintained and supported 700 Solaris, Windows, Linux, and Macintosh desktops and servers}
@@ -186,6 +219,11 @@
 		\ressubitem{B.S., Computer Science with Honors (GPA 3.917)}
 		\ressubitem{Minor: Mathematics}
 	\end{ressubsec}
+\end{ressection}
+
+\begin{ressection}{Certifications}
+	\resitem{RedHat Certified Engineer (RHCE) \textit{(expired)}}
+	\resitem{Cisco Certified Network Associate (CCNA) \textit{(expired)}}
 \end{ressection}
 
 \begin{ressection}{Honors and Awards}
