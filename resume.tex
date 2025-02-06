@@ -25,7 +25,7 @@
 \newcommand{\name}{Jason Parrott}
 \newcommand{\addr}{https://github.com/fanatic}
 \newcommand{\phone}{203-539-1337}
-\newcommand{\email}{resume@jasonparrott.com}
+\newcommand{\email}{jason@parrott.ws}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,20 +115,20 @@
 
 \begin{ressection}{Background}
 	\item[]
-	15+ year experienced platform engineer building and maintaining reliable, elegant, and supportable systems
+	20+ year experienced platform engineer building and maintaining reliable, elegant, and supportable systems
 \end{ressection}
 
 \begin{ressection}{Professional Experience}
 	\begin{ressubsec}{VP, Principal Software Architect}{September 2018 - Present}{FactSet Research Systems}{Norwalk, CT}
 		\ressubitem{Managed a team of seven engineers, responsible for recruiting, team building, product development, project management, technical support, training, and technical architecture}
+		\ressubitem{Concieved and developed Storm, an internal load testing platform for FactSet.  Storm allows development teams to test their applications at scale, simulating millions of users, and identifying performance bottlenecks before they reach production.  Storm is a multi-cloud, multi-region, multi-protocol, and multi-tenant platform that can be used for a variety of testing scenarios (\textit{Go}, \textit{K6}, \textit{VictoriaMetrics})}
 		\ressubitem{Designed, developed, and maintained Rollout, an internal feature flag management and data-driven experimentation platform for FactSet.  Rollout rapidly changed engineering culture, allowing development teams to ship features faster and more reliably to customers.  It enabled a/b testing, user events, and performance and conversion metrics to be collected and analyzed in real-time.  Scheduled changes, approval gates, and metrics-driven kill switches support company initatives for visibility and control (\textit{Go}, \textit{React}, \textit{PostgreSQL}, \textit{Kafka}, \textit{Elasticsearch})}
 		\ressubitem{Inherited the CI/CD team, responsible for maintaining, upgrading, troubleshooting, and on-call support for 15000+ content and application Git-based repositories (\textit{GitHub Enterprise Server}), testing and deployment pipelines (\textit{Cloudbees}, \textit{Jenkins}), and artifact repositories (\textit{JFrog Artifactory}) for all of FactSet's client-facing development teams.  Systematically transformed the team's style of working, enabling rapid development and improved stability.}
-		\ressubitem{Rewrote the FactSet.io (PaaS) HTTP Router from Node.js to Go, allowing the platform to scale to nearly 50,000 requests per second and enable new features (\textit{blue/green deployments}, \textit{mTLS application identity}, \textit{SOCKS5}, \textit{HTTP/2}, \textit{gRPC}, \textit{websockets})}
-		\ressubitem{Added Microsoft Azure cloud support to FactSet.io in one week, working through early adopter issues and fulfilling the vision of a true multi-cloud platform for developers}
+		\ressubitem{Rewrote the FactSet.io (PaaS) HTTP Router from Node.js to Go, allowing the platform to scale to nearly 50,000 requests per second (per server) and enable new features (\textit{blue/green deployments}, \textit{mTLS application identity}, \textit{SOCKS5}, \textit{HTTP/2}, \textit{gRPC}, \textit{websockets})}
 		\ressubitem{Continued to scale FactSet.io (PaaS) to handle nearly 30,000 applications, 2,000 daily active users, and 40\% year-over-year growth rate while making order-of-magnitude improvements to hardware costs, developer efficiency, and operational burden (\textit{Spinnaker})}
 		\ressubitem{Improved the existing containerized Database as a Serivce platform, adding zero-config at-rest and in-flight encryption, multi-tenant Kafka plans, Elasticsearch and MSSQL support}
 		\ressubitem{Led several large-scale migration projects (\textit{Kerberos} $\rightarrow$ \textit{SAML} for platform authentication, \textit{X-Ray} $\rightarrow$ \textit{Lightstep} for distributed tracing, \textit{Docker} $\rightarrow$ \textit{Firecracker} and \textit{containerd} for FactSet.io container runtime)}
-		\ressubitem{Built a multi-tenant, pluggable documentation and collaboration platform allowing migration off dozens of dispearate platforms into a single, searchable, and discoverable location (\textit{Go}, \textit{React}, \textit{CRDT})}
+		\ressubitem{Built Library, a multi-tenant, pluggable documentation and collaboration platform allowing migration off dozens of dispearate platforms into a single, searchable, and discoverable location (\textit{Go}, \textit{React}, \textit{CRDT})}
 		\ressubitem{Enabled network flow visibility and monitoring for FactSet.io, allowing developers to see the flow of data through their applications, services, and databases (\textit{eBPF})}
 		\ressubitem{Executed an external audit of FactSet.io, identifying and resolving dozens of security and compliance improvements, documenting them in a CSA CIAQ for teams going through audits of their own}
 		\ressubitem{Migrated secrets to \textit{Hashicorp Vault}, allowing our components to securely manage their access to resources using automatic rotating tokens and eliminating long-lived secrets on disk}
@@ -139,7 +139,7 @@
 
 	\begin{ressubsec}{Principal Software Engineer}{February 2017 - September 2018}{FactSet Research Systems}{Norwalk, CT}
 		\ressubitem{Managed a team of five engineers, responsible for recruiting, team building, product development, project management, technical support, training, and technical architecture}
-		\ressubitem{Created an integrated Continuous Integration solution providing container-based, ephemeral, zero-config unit and integration testing that runs thousands of times a day}
+		\ressubitem{Build an integrated Continuous Integration solution, FactSet.io CI, providing container-based, ephemeral, zero-config unit and integration testing that runs thousands of times a day}
 		\ressubitem{Improved the existing containerized Database as a Serivce platform, adding multi-region, scaling to 2000+ dbs, supporting client-facing workloads, and adding \textit{Kafka} support}
 		\ressubitem{Added Amazon Web Service (\textit{AWS}) support to FactSet.io, migrating 10000+ applications and their data to the cloud with no downtime or developer intervention}
 		\ressubitem{Deployed Global HTTP Routing and Load Balancing to support FactSet's continued transition to a global company, reducing latency with an easy-to-use developer experience}
@@ -178,7 +178,6 @@
 		\ressubitem{Built network switchport automation to automatically change VLAN and update switchport descriptions during box build}
 		\ressubitem{Designed and built a self-service \textit{MySQL} provisioning system based on \textit{Linux CGroups}, \textit{Pacemaker}, and \textit{Percona Monitoring} tools, with a Rails-based interface for management, requests, query review, metrics, and alerting}
 		\ressubitem{Designed and built a self-service \textit{Elasticsearch} provisioning system for FactSet's new FactSearch search/autocomplete system and Central Logging Platform}
-		\ressubitem{Investigated, installed, and supported \textit{Vertica} for new analytics applications}
 	\end{ressubsec}
 
 	\begin{ressubsec}{Unix Systems Engineer}{June 2008 - October 2011}{FactSet Research Systems}{Norwalk, CT}
@@ -202,16 +201,6 @@
 		\ressubitem{Installed and upgraded megabit and gigabit wiring in several campus buildings}
 		\ressubitem{Developed wiki-based documentation site for documenting lab procedures and a Trac-based documentation site for software projects}
 	\end{ressubsec}
-
-	\begin{ressubsec}{Owner/Webmaster}{March 1999 - August 2006}{Superiorserve}{Wilmington, DE}
-		\ressubitem{Designed, built, and maintained company web site}
-		\ressubitem{Worked on-site to troubleshoot desktop computer malfunctions}
-	\end{ressubsec}
-
-	\begin{ressubsec}{IT Assistant}{Summer 2004, Summer 2005}{Advanced Power Control, Inc.}{Newark, DE}
-		\ressubitem{Installed and configured Windows machines for HVAC automation control}
-		\ressubitem{Repaired employee Dell brand laptops and desktops under a Premier Access Technician certification}
-	\end{ressubsec}
 \end{ressection}
 
 \begin{ressection}{Education}
@@ -220,11 +209,6 @@
 		\ressubitem{B.S., Computer Science with Honors (GPA 3.917)}
 		\ressubitem{Minor: Mathematics}
 	\end{ressubsec}
-\end{ressection}
-
-\begin{ressection}{Certifications}
-	\resitem{RedHat Certified Engineer (RHCE) \textit{(expired)}}
-	\resitem{Cisco Certified Network Associate (CCNA) \textit{(expired)}}
 \end{ressection}
 
 \begin{ressection}{Honors and Awards}
